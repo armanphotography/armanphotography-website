@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">ARMAN PHOTOGRAPHY</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="me.html">Me</a>
+
+            </nav>
+        </header>
+        
+  
+    <div class="row"> 
+        <div class="column">
+          <a href="Photos\1730787092556.jpg"><img id="myImg"src= "Photos\1730787092556.jpg"style="width:100%"></a>
+          <a href="Photos\1730787092276.png"><img id="myImg" src="Photos\1730787092276.png" style="width:100%"></a>
+            <a href="Photos\1730787092302.jpg"><img id="myImg" src= "Photos\1730787092302.jpg"style="width:100%"></a>
+                <a href="Photos\1730787092311.jpg"><img id="myImg" src="Photos\1730787092311.jpg" style="width:100%"></a>
+                    <a href="Photos\1730787092358.jpg"><img id="myImg"src="Photos\1730787092358.jpg"style="width:100%"></a>
+                        <a href=""><img id="myImg"src="Photos\1730787092610.jpg" style="width:100%"></a>
+        </div>
+        <div class="column">
+            <a href="Photos\1730787092419.jpg"><img id="myImg" src="Photos\1730787092419.jpg" style="width:100%"></a>
+                <a href="Photos\1730787092025.jpeg"><img id="myImg"src="Photos\1730787092025.jpeg" style="width:100%"></a>
+                    <a href="Photos\1730787092462.jpg"><img id="myImg"src="Photos\1730787092462.jpg" style="width:100%"></a>
+                        <a href="Photos\Bird.jpg"><img id="myImg"src="Photos\Bird.jpg" style="width:100%"></a>
+                            <a href="Photos\1730787092579.jpg"><img id="myImg"src="Photos\1730787092579.jpg" style="width:100%"></a>
+                                <a href="Photos\1730787092219.png"><img id="myImg"src="Photos\1730787092219.png" style="width:100%"></a>
+                                    <a href="Photos\1730787092635.jpg"><img id="myImg"src="Photos\1730787092635.jpg" style="width:100%"></a>
+                                        <a href="Photos\1730787092629.jpg"><img id="myImg"src="Photos\1730787092629.jpg" style="width: 100%;"></a>
+        </div>  
+        <div class="column">
+            <a href="Photos\1730787092364.jpg"><img id="myImg"src="Photos\1730787092364.jpg"style="width:100%"></a>
+                <a href="Photos\IMG_20240211_175813.jpg"><img id="myImg"src= "Photos\IMG_20240211_175813.jpg"style="width:100%"></a>
+                    <a href="Photos\1730787091977.JPG"> <img id="myImg"src= "Photos\1730787091977.JPG"style="width:100%"></a>
+
+        </div>
+        <div class="column">
+            <a href="Photos\1730787092369.jpg"><img id="myImg"src="Photos\1730787092369.jpg" style="width:100%"></a>
+                <a href="Photos\1730787092573.jpg"><img id="myImg"src="Photos\1730787092573.jpg" style="width:100%"></a>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="footerContainer">
+            <div class="socialcons">
+                <a href="https://www.instagram.com/arman_fr_/profilecard/?igsh=MW1jaG9md3RvYTdoZQ=="><i class="fa-brand fa-instagram"></i></a>
+                <a href="mailto:armanfr04@gmail.com"><i class="fa-solid fa-at"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                
+            </div>
+            <div class="footernav">
+                <ul>
+                    <li><a href="#">Go to top</a> </li>
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="me.html" id="myInput">About</a> </li>
+                    <li><a href="#">Portfolio</a> </li>
+                </ul>
+            </div>  
+        </div>
+    </footer>
+      
+      <script>
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+      
+      // Declare a loop variable
+      var j;
+      
+      // Full-width images
+      function one() {
+          for (j = 0; i < elements.length; j++) {
+          elements[j].style.msFlex = "100%";  // IE10
+          elements[j].style.flex = "100%";
+        }
+      }
+      
+      // Two images side by side
+      function two() {
+        for (j = 0; i < elements.length; j++) {
+          elements[j].style.msFlex = "50%";  // IE10
+          elements[j].style.flex = "50%";
+        }
+      }
+      
+      // Four images side by side
+      function four() {
+        for (j = 0; i < elements.length; j++) {
+          elements[j].style.msFlex = "25%";  // IE10
+          elements[j].style.flex = "25%";
+        }
+      }
+      
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var j = 0; i < btns.length; j++) {
+        btns[j].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
+      </script>
+    
+      </body>
+      
+</html>

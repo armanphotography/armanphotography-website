@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Arman Photography</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">ARMAN PHOTOGRAPHY</a>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="me.html">Me</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="me2.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>ARMAN</h1>
+            <h3>PHOTOGRAPHY</h3>
+            <h3 class="typing-text"><span></span>
+            <p>Have a great time exploring photographs by Arman.</p>
+        </h3>
+        <div class="quicklinks">
+            <div class="gallery">
+                <a href="portfolio.html">Gallery</a>
+                <a href="me.html">About</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://www.instagram.com/arman_fr_/profilecard/?igsh=MW1jaG9md3RvYTdoZQ=="><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:armanfr04@gmail.com"><i class="fa-solid fa-at"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            
+        </div>
+        <div class="footernav">
+            <ul>
+                <li><a href="#">Go to top</a> </li>
+                <li><a href="#">Home</a> </li>
+                <li><a href="me.html" id="myInput">About</a> </li>
+                <li><a href="portfolio.html">Portfolio</a> </li>
+            </ul>
+        </div>  
+    </div>
+</footer>
+<script>
+    $(document).ready(function() {
+	
+	// Add class to mailto link
+	// Needed to separate the disabling of the default action AND copy email to clipboard
+	$('a[href^=mailto]').addClass('mailto-link');
+
+	var mailto = $('.mailto-link');
+	var messageCopy = 'Click to copy email address';
+	var messageSuccess = 'Email address copied to clipboard';
+	
+	mailto.append('<span class="mailto-message"></span>');
+	$('.mailto-message').append(messageCopy);
+	
+	// Disable opening your email client. yuk.
+	$('a[href^=mailto]').click(function() {
+		return false; 
+	})
+	
+	// On click, get href and remove 'mailto:' from value
+	// Store email address in a variable.
+	mailto.click(function() {
+		var href = $(this).attr('href');
+		var email = href.replace('mailto:', '');
+		copyToClipboard(email);
+		$('.mailto-message').empty().append(messageSuccess);
+		setTimeout(function() {
+			$('.mailto-message').empty().append(messageCopy);}, 2000); 
+	});
+	
+});
+
+// Grabbed this from Stack Overflow.
+// Copies the email variable to clipboard
+function copyToClipboard(text) {
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+}
+</script>
+</body>
+</html>
